@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Textile Calculation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+          <div class="row h-100">
+              <div class="col-md-12 my-auto">
+                <div class="card card-block w-100 mt-5">
+                    <h5 class="heading display-5 pb-3">Select Menu</h5>
+                    <div class="dropdown">
+                        <button class="dropbtn">Unit Convert</button>
+                        <div class="dropdown-content">
+                          <a href="#" id="count-convert">Count Convert</a>
+                          <a href="#" id ="length-convert">Length Convert</a>
+                          <a href="#" id ="weight-convert">Weight Convert</a>
+                        </div>
+                      </div> 
+                      <br>
+                      <div class="dropdown">
+                          <button class="dropbtn">Other</button>
+                          <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        </div>
+                </div>
+              </div>
+           </div>
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5" id="card-head">
+            <h1 class="heading display-5 pb-3" id="heading">Welcome To TexCalculation</h1>
+            <div id="input-form">
+                <!-- Count Conversion -->
+                <form id="count-form">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <select class="selectpicker" id="selection-in" >
+                          <!-- Direct -->
+                          <option value="Tt">Tex</option>
+                          <option value="D">Denier</option>
+                          <option value="dtex">DeciTex</option>
+                          <option value="mtex">Millitex</option>
+                          <option value="ktex">Kilotex</option>
+                  
+                          <!-- Indirect -->
+                          <option value="Ne">English</option>
+                          <option value="Nm">Metric</option>
+                          <option value="Nw">Woollen(YSW)</option>
+                          <option value="Nw">Worsted</option>
+                          <option value="Nl">Linen</option>
+                          
+                        </select>
+                        <input type="number" class="form-control" id="input-count" placeholder="Enter Count Value">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon">Converted To:</span>
+                        <select class="selectpicker" id="selection-out" >
+                          <!-- Direct -->
+                          <option value="Tt">Tex</option>
+                          <option value="D">Denier</option>
+                          <option value="dtex">DeciTex</option>
+                          <option value="mtex">Millitex</option>
+                          <option value="ktex">Kilotex</option>
+                          
+                          <!-- Indirect -->
+                          <option value="Ne">English</option>
+                          <option value="Nm">Metric</option>
+                          <option value="Nw">Woollen(YSW)</option>
+                          <option value="Nk">Worsted</option>
+                          <option value="Nl">Linen</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="forn-group">
+                      <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                    </div>
+                  </form>
+
+                  <!-- Length Conversion -->
+                  <form id="length-form">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <select class="selectpicker" id="selection-in-length" >
+                            <option value="mm">millimeter</option>
+                            <option value="cm">centimeter</option>
+                            <option value="m">meter</option>
+                            <option value="km">kilometer</option>
+                            <option value="in">inch</option>
+                            <option value="ft">feet</option>
+                            <option value="yd">yard</option>
+                            <option value="mi">mile</option>
+                            <option value="nmi">nautical mile</option>
+                          </select>
+                          <input type="number" class="form-control" id="input-length" placeholder="Enter Length Value">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon">Converted To:</span>
+                          <select class="selectpicker" id="selection-out-length" >
+                            <option value="mm">millimeter</option>
+                            <option value="cm">centimeter</option>
+                            <option value="m">meter</option>
+                            <option value="km">kilometer</option>
+                            <option value="in">inch</option>
+                            <option value="ft">feet</option>
+                            <option value="yd">yard</option>
+                            <option value="mi">mile</option>
+                            <option value="nmi">nautical mile</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="forn-group">
+                        <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                      </div>
+                    </form>
+
+                    <!-- Weight Conversion -->
+                  <form id="weight-form">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <select class="selectpicker" id="selection-in-weight" >
+                          <option value="gm">gram</option>
+                          <option value="kg">kilogram</option>
+                          <option value="lb">pound</option>
+                          <option value="oz">ounce</option>
+                          <option value="carat">carat</option>
+                          <option value="ton-us">short ton</option>
+                          <option value="ton-uk">long ton</option>
+                          <option value="ton-metric">metric ton</option>
+                          <option value="gr">grain</option>
+                        </select>
+                        <input type="number" class="form-control" id="input-weight" placeholder="Enter weight Value">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <span class="input-group-addon">Converted To:</span>
+                        <select class="selectpicker" id="selection-out-weight" >
+                          <option value="gm">gram</option>
+                          <option value="kg">kilogram</option>
+                          <option value="lb">pound</option>
+                          <option value="oz">ounce</option>
+                          <option value="carat">carat</option>
+                          <option value="ton-us">short ton</option>
+                          <option value="ton-uk">long ton</option>
+                          <option value="ton-metric">metric ton</option>
+                          <option value="gr">grain</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="forn-group">
+                      <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                    </div>
+                  </form>
+
+
+            </div>
+            
+            <!-- LOADER -->
+            <div id="loading">
+              <img src="img/loading.gif" alt="">
+            </div>
+            <!-- RESULTS -->
+            <div id="results" class="pt-4">
+              <h5>Results</h5>
+              <div class="form-group">
+                <div class="input-group" id="result">
+                    <span class="input-group-addon" id='output-span'></span>
+                  <input type="number" class="form-control" id="output-count" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <footer class="app-footer">
+      <a href="#">eshafik</a> © 2018
+      <span class="float-right">Powered by <a href="http://eshafik.wordpress.com/">MSI Shafik</a>
+          </span>
+  </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <script src="js/err.js"></script>
+    <script src="js/count.js"></script>
+    <script src="js/length.js"></script>
+    <script src="js/weight.js"></script>
+    <script src="js/app6.js"></script>
+  </body>
+</html>
