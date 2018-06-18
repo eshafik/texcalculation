@@ -239,7 +239,6 @@ class lengthUI{
           
       
         } else {
-            console.log("count error");
             const ui = new ErrorUI;
             ui.showError();
         }

@@ -47,19 +47,20 @@
     background-color: #3e8e41;
 }
 
+/* Hide all form */
 #loading, #results {
     display:none;
   }
-  #count-form, #length-form, #weight-form{
+  #count-form, #length-form, #weight-form, #dia-form{
     display: none;
   }
 
   .app-footer a{
-    color: #ee3919;
+    color: #36df14;
   }
   .app-footer span{
     color: #f1f1f1;
   }
   .app-footer{
-    color: #f1f1f1;
+    color: #f2f7f0;
   }

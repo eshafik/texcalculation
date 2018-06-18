@@ -23,6 +23,14 @@ document.getElementById('weight-convert').addEventListener('click',function(e){
   
   e.preventDefault();
 })
+//Yarn Dia Menu
+document.getElementById('yarn-dia').addEventListener('click',function(e){
+    
+  setHeading("Calculate Yarn Dia From Count");
+  displayOn('dia-form');
+  
+  e.preventDefault();
+})
 
 
 
@@ -69,6 +77,20 @@ document.getElementById('count-form').addEventListener('submit', function(e){
     e.preventDefault();
   })
 
+  //listener for Yarn dia calculating
+  document.getElementById('dia-form').addEventListener('submit',function(e){
+    const ui = new DiaUI;
+    // Hide results
+    document.getElementById('results').style.display = 'none';
+    
+    // Show loader
+    document.getElementById('loading').style.display = 'block';
+  
+    setTimeout(ui.findDia, 500);
+  
+    e.preventDefault();
+  })
+
 
   function setHeading(str){
     const header = document.getElementById('heading');
@@ -78,6 +100,7 @@ document.getElementById('count-form').addEventListener('submit', function(e){
     document.getElementById('count-form').style.display = 'none';
     document.getElementById('length-form').style.display = 'none';
     document.getElementById('weight-form').style.display = 'none';
+    document.getElementById('dia-form').style.display = 'none';
     document.getElementById(id).style.display = 'block';
 
   }

@@ -13,6 +13,11 @@
 
   </head>
   <body class="bg-dark">
+      <nav class="navbar navbar-dark bg-primary mb-3">
+          <div class="container">
+              <a href="#" class="navbar-brand">Textile Calculation</a>
+          </div>
+      </nav>
     <div class="container">
       <div class="row">
           <div class="row h-100">
@@ -29,11 +34,10 @@
                       </div> 
                       <br>
                       <div class="dropdown">
-                          <button class="dropbtn">Other</button>
+                          <button class="dropbtn">Yarn Related</button>
                           <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#" id="yarn-dia">Find Yarn Dia</a>
+                            <a href="#">Coming soon others</a>
                           </div>
                         </div>
                 </div>
@@ -169,6 +173,36 @@
                     </div>
                   </form>
 
+                  <!-- Find Yarn Dia -->
+                <form id="dia-form">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <select class="selectpicker" id="selection-in-dia" >
+                        <!-- Direct -->
+                        <option value="Tt">Tex</option>
+                        <option value="D">Denier</option>
+                        <option value="dtex">DeciTex</option>
+                        <option value="mtex">Millitex</option>
+                        <option value="ktex">Kilotex</option>
+                
+                        <!-- Indirect -->
+                        <option value="Ne">English</option>
+                        <option value="Nm">Metric</option>
+                        <option value="Nw">Woollen(YSW)</option>
+                        <option value="Nw">Worsted</option>
+                        <option value="Nl">Linen</option>
+                        
+                      </select>
+                      <input type="number" step="any" min=0  class="form-control" id="input-dia" placeholder="Enter Yarn Count Value">
+                    </div>
+                  </div>
+                  
+                  <div class="forn-group">
+                    <input type="submit" value="Calculate Dia" class="btn btn-dark btn-block">
+                  </div>
+                </form>
+
+
 
             </div>
             
@@ -207,6 +241,7 @@
     <script src="js/count.js"></script>
     <script src="js/length.js"></script>
     <script src="js/weight.js"></script>
+    <script src="js/yarndia.js"></script>
     <script src="js/app6.js"></script>
   </body>
 </html>
