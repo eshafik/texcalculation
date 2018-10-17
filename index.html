@@ -31,26 +31,486 @@
                           <a href="#" id ="length-convert">Length Convert</a>
                           <a href="#" id ="weight-convert">Weight Convert</a>
                         </div>
-                      </div> 
+                      </div>
                       <br>
                       <div class="dropdown">
                           <button class="dropbtn">Yarn Related</button>
                           <div class="dropdown-content">
                             <a href="#" id="yarn-dia">Find Yarn Dia</a>
+                            <a href="#" id="CIW">Correct Invoice Weight</a>
                             <a href="#">Coming soon others</a>
                           </div>
+                      </div>
+                      <br>
+                      <div class="dropdown">
+                        <button class="dropbtn">Fabric Consumption</button>
+                        <div class="dropdown-content">
+                          <a href="#" id="ws-menu">Woven Shirt</a>
+                          <a href="#" id ="wp-menu">Woven Pant</a>
+                          <a href="#" id ="kt-menu">Basic T-Shirt</a>
                         </div>
+                      </div>
                 </div>
               </div>
            </div>
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-10 mx-auto">
           <div class="card card-body text-center mt-5" id="card-head">
-            <h1 class="heading display-5 pb-3" id="heading">Welcome To TexCalculation</h1>
+            <h1 class="heading display-5 pb-3" id="heading">Welcome To TexCalculation <br>By-</h1>
+            <center id="my-image">
+                <figure>
+                    <a href="https://eshafik.github.io/" target="_blank"><img src="img/shafik.jpg" alt="" style="width:210px;height:200px;"></a>
+                    <figcaption><p><a href="https://eshafik.github.io/" target="_blank">MSI Shafik,</a><br>
+                      <i>Dept. of Textile Engineering, DUET,Gazipur.</i> 
+                    </p></figcaption>
+                  </figure> 
+              
+            </center> 
             <div id="input-form">
+              <!-- Woven Shirt-->
+              <form id="ws-form">
+                  <div class="form-group">
+                    <!--For Body-->
+                    <h4 align='left'>Body:</h4>
+                    <div class="input-group">
+                    <span class="input-group-addon">Body Length: </span>
+                    <input type="text"   class="form-control" id="input-ws-bd" placeholder="0">
+                      <select class="selectpicker" id="selection-in-ws-bd" >
+                        <option value="cm">cm</option>
+                        <option value="in">in</option>
+                      </select>
+                      <!--For Body allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                        <input type="text" class="form-control" id="input-ws-bd-al" placeholder="0" >
+                        <span class="input-group-addon">cm</span>
+                      <span class="input-group-addon">||</span>
+                      <!--Half Chest-->
+                      <span class="input-group-addon">Half Chest: </span>
+                        <input type="text"   class="form-control" id="input-ws-ch" placeholder="0">
+                          <select class="selectpicker" id="selection-in-ws-ch" >
+                              <option value="cm">cm</option>
+                              <option value="in">in</option>
+                          </select>
+                          <!--Half Chest allownace-->
+                          <span class="input-group-addon">Al.: </span>
+                          <input type="text"   class="form-control" id="input-ws-ch-al" placeholder="0">
+                          <span class="input-group-addon">cm</span>
+                    </div>
+                    <!--Sleeve-->
+                    <h4 align='left'>Sleeve:</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon">Sleeve Length: </span>
+                        <input type="text"   class="form-control" id="input-ws-sl" placeholder="0">
+                          <select class="selectpicker" id="selection-in-ws-sl" >
+                              <option value="cm">cm</option>
+                              <option value="in">in</option>
+                          </select>
+                          <!--Sleeve allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-sl-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                    <span class="input-group-addon">||</span>
+                          <!--Armhole-->
+                          <span class="input-group-addon"> </span>
+                          <span class="input-group-addon">Arm Hole: </span>
+                          <input type="text"   class="form-control" id="input-ws-ar" placeholder="0">
+                          <select class="selectpicker" id="selection-in-ws-ar" >
+                              <option value="cm">cm</option>
+                              <option value="in">in</option>
+                          </select>
+                          <!--Armhole allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-ar-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                  </div>
+                  <!--Collar Length-->
+                  <h4 align='left'>Collar:</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon">Collar Length: </span>
+                        <input type="text"   class="form-control" id="input-ws-cl-l" placeholder="0">
+                          <select class="selectpicker" id="selection-in-ws-cl-l" >
+                              <option value="cm">cm</option>
+                              <option value="in">in</option>
+                          </select>
+                          <!--Collar Length allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-cl-l-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                          <span class="input-group-addon"> </span>
+                          <!--Collar Width-->
+                          <span class="input-group-addon">Collar Width: </span>
+                          <input type="text"   class="form-control" id="input-ws-cl-w" placeholder="0">
+                          <select class="selectpicker" id="selection-in-ws-cl-w" >
+                              <option value="cm">cm</option>
+                              <option value="in">in</option>
+                          </select>
+                          <!--Collar Width allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-cl-w-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                  </div>
+                  <!--Collar Band Length-->
+                  <h4 align='left'>Collar Band:</h4>
+                  <div class="input-group">
+                      <span class="input-group-addon">Band Length: </span>
+                      <input type="text"   class="form-control" id="input-ws-clb-l" placeholder="0">
+                        <select class="selectpicker" id="selection-in-ws-clb-l" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                        </select>
+                        <!--Collar Band Length allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-clb-l-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                        <span class="input-group-addon"> </span>
+                        <!--Collar Band Width-->
+                        <span class="input-group-addon">Band Width: </span>
+                        <input type="text"   class="form-control" id="input-ws-clb-w" placeholder="0">
+                        <select class="selectpicker" id="selection-in-ws-clb-w" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                          </select>
+                        <!--Collar Band width allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-clb-w-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                </div>
+                <h4 align='left'>Cuff:</h4>
+                  <div class="input-group">
+                    <!--Cuff Length-->
+                      <span class="input-group-addon">Cuff Length: </span>
+                      <input type="text"   class="form-control" id="input-ws-cf-l" placeholder="0">
+                        <select class="selectpicker" id="selection-in-ws-cf-l" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                        </select>
+                      <!--Cuff Length allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-cf-l-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                        <span class="input-group-addon"> </span>
+                        <!--Cuff Width-->
+                        <span class="input-group-addon">Cuff Width: </span>
+                        <input type="text"   class="form-control" id="input-ws-cf-w" placeholder="0">
+                        <select class="selectpicker" id="selection-in-ws-cf-w" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                        </select>
+                        <!--Cuff width allowance-->
+                      <span class="input-group-addon">Al.: </span>
+                      <input type="text" class="form-control" id="input-ws-cf-w-al" placeholder="0" >
+                      <span class="input-group-addon">cm</span>
+                </div>
+                <h4 align='left'>Pocket:</h4>
+                <div class="input-group">
+                  <!--Pocket Length-->
+                    <span class="input-group-addon">Pocket Length: </span>
+                    <input type="text"   class="form-control" id="input-ws-pk-l" placeholder="0">
+                      <select class="selectpicker" id="selection-in-ws-pk-l" >
+                          <option value="cm">cm</option>
+                          <option value="in">in</option>
+                      </select>
+                    <!--Pocket Length allowance-->
+                    <span class="input-group-addon">Al.: </span>
+                    <input type="text" class="form-control" id="input-ws-pk-l-al" placeholder="0" >
+                    <span class="input-group-addon">cm</span>
+                      <span class="input-group-addon"> </span>
+                      <!--Pocket Width-->
+                      <span class="input-group-addon">Pocket Width: </span>
+                      <input type="text"   class="form-control" id="input-ws-pk-w" placeholder="0">
+                      <select class="selectpicker" id="selection-in-ws-pk-w" >
+                          <option value="cm">cm</option>
+                          <option value="in">in</option>
+                      </select>
+                    <!--Pocket width allowance-->
+                    <span class="input-group-addon">Al.: </span>
+                    <input type="text" class="form-control" id="input-ws-pk-w-al" placeholder="0" >
+                    <span class="input-group-addon">cm</span>
+              </div>
+              <h4 align='left'>Yoke:</h4>
+                  <div class="input-group">
+                    <!--Yoke Length-->
+                      <span class="input-group-addon">Yoke Length: </span>
+                      <input type="text"   class="form-control" id="input-ws-yo-l" placeholder="0">
+                        <select class="selectpicker" id="selection-in-ws-yo-l" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                        </select>
+                        <!--Yoke Length allowance-->
+                    <span class="input-group-addon">Al.: </span>
+                    <input type="text" class="form-control" id="input-ws-yo-l-al" placeholder="0" >
+                    <span class="input-group-addon">cm</span>
+                        <span class="input-group-addon"> </span>
+                        <!--Yoke Width-->
+                        <span class="input-group-addon">Yoke Width: </span>
+                        <input type="text"   class="form-control" id="input-ws-yo-w" placeholder="0">
+                        <select class="selectpicker" id="selection-in-ws-yo-w" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                          </select>
+                        <!--Yoke width allowance-->
+                    <span class="input-group-addon">Al.: </span>
+                    <input type="text" class="form-control" id="input-ws-yo-w-al" placeholder="0" >
+                    <span class="input-group-addon">cm</span>
+                </div>
+                    <br><br>
+                    <div class="input-group">
+                      <!--Wastage Percentage-->
+                            <span class="input-group-addon">Wastage(Percentage): </span>
+                            <input type="number"   class="form-control" id="input-ws-w" placeholder="0">
+                            <span class="input-group-addon">%</span>
+                    </div>
+                    <p></p>
+                    <div class="input-group">
+                      <!--Fabric Width-->
+                        <span class="input-group-addon">Fabric Width: </span>
+                        <input type="text"   class="form-control" id="input-ws-fw" placeholder="52">
+                        <select class="selectpicker" id="selection-in-ws-fw" >
+                            <option value="in">in</option>
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="yd">yd</option>
+                          </select>
+                    </div>
+                    <p></p>
+                    <div class="input-group">
+                      <!--Total Quantity of Garments-->
+                        <span class="input-group-addon">Total Quantity Of Garments: </span>
+                        <input type="number"   class="form-control" id="input-ws-qt" placeholder="1">
+                        <select class="selectpicker" id="selection-in-ws-qt" >
+                          <option value="pcs">Pcs</option>
+                          <option value="dz">Dz</option>
+                        </select>
+                    </div>
+                  </div>
+                  <p></p>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon">Expected Result Unit:</span>
+                      <select class="selectpicker" id="selection-out-ws" >
+                        <option value="yd">Yard</option>
+                        <option value="m">Meter</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="forn-group">
+                    <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                  </div>
+                </form>
+
+              <!--End Woven Shirt-->
+
+                <!--Woven Pant Form-->
+              <form id="wp-form">
+                <div class="form-group">
+                  <!--For Body-->
+                  <h4 align='left'>Body Part:</h4>
+                  <div class="input-group">
+                  <span class="input-group-addon">Out Seam Length: </span>
+                  <input type="text"   class="form-control" id="input-wp-os" placeholder="0">
+                    <select class="selectpicker" id="selection-in-wp-os" >
+                      <option value="in">in</option>
+                      <option value="cm">cm</option>
+                    </select>
+
+                    <span class="input-group-addon">||</span>
+                    <!--Top Thigh-->
+                    <span class="input-group-addon">Top Thigh: </span>
+                      <input type="text"   class="form-control" id="input-wp-th" placeholder="full length">
+                        <select class="selectpicker" id="selection-in-wp-th" >
+                            <option value="in">in</option>
+                            <option value="cm">cm</option>
+                        </select>
+                  </div>
+                  <!--For loop-->
+                  <h4 align='left'>Belt Loop: </h4>
+                  <div class="input-group">
+                    <!--loop length-->
+                  <span class="input-group-addon">Loop Length: </span>
+                  <input type="text"   class="form-control" id="input-wp-lp-l" placeholder="0">
+                    <select class="selectpicker" id="selection-in-wp-lp-l" >
+                      <option value="cm">cm</option>
+                      <option value="in">in</option>
+                    </select>
+                    <span class="input-group-addon">||</span>
+                    <!--Loop Width-->
+                    <span class="input-group-addon">Loop Width: </span>
+                      <input type="text"   class="form-control" id="input-wp-lp-w" placeholder="0">
+                        <select class="selectpicker" id="selection-in-wp-lp-w" >
+                            <option value="cm">cm</option>
+                            <option value="in">in</option>
+                        </select>
+                  </div>
+                  <p></p>
+                  <div class="input-group">
+                    <!-- No of loop Parts-->
+                  <span class="input-group-addon">No. of Parts: </span>
+                  <input type="number"   class="form-control" id="input-wp-lp-p" placeholder="1">
+                    <span class="input-group-addon">||</span>
+                    <!--No. of Loop-->
+                    <span class="input-group-addon">No. of Loop: </span>
+                      <input type="number"   class="form-control" id="input-wp-lp-n" placeholder="1">
+                  </div>
+                  <!--Pocket-->
+                  <h4 align='left'>Pocket: </h4>
+                  <div class="input-group">
+                      <!--pocket length-->
+                    <span class="input-group-addon">Pocket Length: </span>
+                    <input type="text"   class="form-control" id="input-wp-pk-l" placeholder="0">
+                      <select class="selectpicker" id="selection-in-wp-pk-l" >
+                        <option value="cm">cm</option>
+                        <option value="in">in</option>
+                      </select>
+                      <span class="input-group-addon">||</span>
+                      <!--Pocket Width-->
+                      <span class="input-group-addon">Pocket Width: </span>
+                        <input type="text"   class="form-control" id="input-wp-pk-w" placeholder="0">
+                          <select class="selectpicker" id="selection-in-wp-pk-w" >
+                              <option value="cm">cm</option>
+                              <option value="in">in</option>
+                          </select>
+                    </div>
+                    <p></p>
+                  <div class="input-group">
+                      <!-- No of Pocket Parts-->
+                    <span class="input-group-addon">No. of Parts: </span>
+                    <input type="number"   class="form-control" id="input-wp-pk-p" placeholder="1">
+                      <span class="input-group-addon">||</span>
+                      <!--No. of Pocket-->
+                      <span class="input-group-addon">No. of Pocket: </span>
+                        <input type="number"   class="form-control" id="input-wp-pk-n" placeholder="1">
+                    </div>
+                  <br><br>
+                  <div class="input-group">
+                    <!--Wastage Percentage-->
+                          <span class="input-group-addon">Wastage(Percentage): </span>
+                          <input type="number"   class="form-control" id="input-wp-w" placeholder="0">
+                          <span class="input-group-addon">%</span>
+                  </div>
+                  <p></p>
+                  <div class="input-group">
+                    <!--Fabric Width-->
+                      <span class="input-group-addon">Fabric Width: </span>
+                      <input type="text"   class="form-control" id="input-wp-fw" placeholder="52">
+                      <select class="selectpicker" id="selection-in-wp-fw" >
+                          <option value="in">in</option>
+                          <option value="cm">cm</option>
+                          <option value="m">m</option>
+                          <option value="yd">yd</option>
+                        </select>
+                  </div>
+                  <p></p>
+                  <div class="input-group">
+                    <!--Total Quantity of Garments-->
+                      <span class="input-group-addon">Total Quantity: </span>
+                      <input type="number"   class="form-control" id="input-wp-qt" placeholder="1">
+                      <select class="selectpicker" id="selection-in-wp-qt" >
+                        <option value="pcs">Pcs</option>
+                        <option value="dz">Dz</option>
+                      </select>
+                  </div>
+                </div>
+                <p></p>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Expected Result Unit:</span>
+                    <select class="selectpicker" id="selection-out-wp" >
+                      <option value="yd">Yard</option>
+                      <option value="m">Meter</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="forn-group">
+                  <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                </div>
+              </form>
+              <!--End Woven Pant-->
+
+              <!--Basic T-Shirt-->
+              <form id="kt-form">
+                <div class="form-group">
+                  <!-- Body Length-->
+                  <div class="input-group">
+                  <span class="input-group-addon">Body Length: </span>
+                  <input type="text"   class="form-control" id="input-kt-bd" placeholder="0">
+                    <select class="selectpicker" id="selection-in-kt-bd" >
+                      <option value="cm">cm</option>
+                      <option value="in">in</option>
+                    </select>
+
+                    <span class="input-group-addon"> </span>
+                    <!--Sleeve Length-->
+                    <span class="input-group-addon">Sleeve Length: </span>
+                      <input type="text"   class="form-control" id="input-kt-sl" placeholder="0">
+                        <select class="selectpicker" id="selection-in-kt-sl" >
+                          <option value="cm">cm</option>  
+                          <option value="in">in</option>
+                        </select>
+
+                        <!--Allowance-->
+                        <span class="input-group-addon">Allowance: </span>
+                      <input type="text"   class="form-control" id="input-kt-sl-al" placeholder="0">
+                      <span class="input-group-addon">cm</span>
+                  </div>
+                  <p></p><p></p>
+                  <div class="input-group">
+                    <!--Chest length-->
+                  <span class="input-group-addon">Half Chest: </span>
+                  <input type="text"   class="form-control" id="input-kt-ch" placeholder="0">
+                    <select class="selectpicker" id="selection-in-kt-ch" >
+                      <option value="cm">cm</option>
+                      <option value="in">in</option>
+                    </select>
+                    <!--Allowance-->
+                    <span class="input-group-addon">Allowance: </span>
+                    <input type="text"   class="form-control" id="input-kt-ch-al" placeholder="0">
+                    <span class="input-group-addon">cm</span>
+
+                    <span class="input-group-addon"> </span>
+                    <!--GSM-->
+                  <span class="input-group-addon">GSM: </span>
+                  <input type="text"   class="form-control" id="input-kt-gsm" placeholder="0">
+                </div>
+                  <br><br>
+                  <div class="input-group">
+                    <!--Wastage Percentage-->
+                          <span class="input-group-addon">Wastage(Percentage): </span>
+                          <input type="number"   class="form-control" id="input-kt-w" placeholder="0">
+                          <span class="input-group-addon">%</span>
+                  </div>
+                  <p></p>
+
+                  <div class="input-group">
+                    <!--Total Quantity of Garments-->
+                      <span class="input-group-addon">Total Quantity: </span>
+                      <input type="number"   class="form-control" id="input-kt-qt" placeholder="1">
+                      <select class="selectpicker" id="selection-in-kt-qt" >
+                        <option value="pcs">Pcs</option>
+                        <option value="dz">Dz</option>
+                      </select>
+                  </div>
+                </div>
+                <p></p>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Expected Result Unit:</span>
+                    <select class="selectpicker" id="selection-out-kt" >
+                      <option value="kg">Kg</option>
+                      <option value="gm">Gm</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="forn-group">
+                  <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                </div>
+              </form>
+
+              <!--End Knit T-Shirt-->
+
                 <!-- Count Conversion -->
                 <form id="count-form">
                     <div class="form-group">
                       <div class="input-group">
+                          <input type="number" step="any" min=0  class="form-control" id="input-count" placeholder="Enter Count Value">
                         <select class="selectpicker" id="selection-in" >
                           <!-- Direct -->
                           <option value="Tt">Tex</option>
@@ -58,16 +518,16 @@
                           <option value="dtex">DeciTex</option>
                           <option value="mtex">Millitex</option>
                           <option value="ktex">Kilotex</option>
-                  
+
                           <!-- Indirect -->
                           <option value="Ne">English</option>
                           <option value="Nm">Metric</option>
                           <option value="Nw">Woollen(YSW)</option>
                           <option value="Nw">Worsted</option>
                           <option value="Nl">Linen</option>
-                          
+
                         </select>
-                        <input type="number" step="any" min=0  class="form-control" id="input-count" placeholder="Enter Count Value">
+                      
                       </div>
                     </div>
                     <div class="form-group">
@@ -80,7 +540,7 @@
                           <option value="dtex">DeciTex</option>
                           <option value="mtex">Millitex</option>
                           <option value="ktex">Kilotex</option>
-                          
+
                           <!-- Indirect -->
                           <option value="Ne">English</option>
                           <option value="Nm">Metric</option>
@@ -168,7 +628,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="forn-group">
+                    <div class="form-group">
                       <input type="submit" value="Calculate" class="btn btn-dark btn-block">
                     </div>
                   </form>
@@ -177,6 +637,7 @@
                 <form id="dia-form">
                   <div class="form-group">
                     <div class="input-group">
+                        <input type="number" step="any" min=0  class="form-control" id="input-dia" placeholder="Enter Yarn Count Value">
                       <select class="selectpicker" id="selection-in-dia" >
                         <!-- Direct -->
                         <option value="Tt">Tex</option>
@@ -184,19 +645,19 @@
                         <option value="dtex">DeciTex</option>
                         <option value="mtex">Millitex</option>
                         <option value="ktex">Kilotex</option>
-                
+
                         <!-- Indirect -->
                         <option value="Ne">English</option>
                         <option value="Nm">Metric</option>
                         <option value="Nw">Woollen(YSW)</option>
                         <option value="Nw">Worsted</option>
                         <option value="Nl">Linen</option>
-                        
+
                       </select>
-                      <input type="number" step="any" min=0  class="form-control" id="input-dia" placeholder="Enter Yarn Count Value">
+                      
                     </div>
                   </div>
-                  
+
                   <div class="forn-group">
                     <input type="submit" value="Calculate Dia" class="btn btn-dark btn-block">
                   </div>
@@ -205,7 +666,7 @@
 
 
             </div>
-            
+
             <!-- LOADER -->
             <div id="loading">
               <img src="img/loading.gif" alt="">
@@ -224,11 +685,12 @@
         </div>
       </div>
     </div>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
     <footer class="app-footer">
       <a href="#">eshafik</a> © 2018
       <span class="float-right">Powered by <a href="http://eshafik.wordpress.com/">MSI Shafik</a>
-          </span>
+      </span>
+      <br><br>
   </footer>
 
     <!-- Optional JavaScript -->
@@ -237,11 +699,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
+    
     <script src="js/err.js"></script>
     <script src="js/count.js"></script>
     <script src="js/length.js"></script>
     <script src="js/weight.js"></script>
     <script src="js/yarndia.js"></script>
+    <script src="js/tshirt.js"></script>
+    <script src="js/wovenPant.js"></script>
+    <script src="js/wovenShirt.js"></script>
     <script src="js/app6.js"></script>
   </body>
 </html>

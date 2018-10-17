@@ -51,7 +51,7 @@
 #loading, #results {
     display:none;
   }
-  #count-form, #length-form, #weight-form, #dia-form{
+  #count-form, #length-form, #weight-form, #dia-form, #ws-form, #wp-form, #kt-form{
     display: none;
   }
 
