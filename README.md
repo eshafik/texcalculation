@@ -1,6 +1,6 @@
-#THIS IS APP FOR TEXTILE CALCULATION
+# THIS IS APP FOR TEXTILE CALCULATION
 
-#Features:
+# Features:
 1. Count Conversion from any unit to any unit.
 2. Yarn Dia Calculation from count.
 3. Fabric Consumption for :
@@ -13,7 +13,7 @@ N.B: This app is also included length and weight conversion system for textile c
 It will be updated day by day.
 
 
-#Notice:
+# Notice:
 This is fully personal project so not allow to copy it.
 
 Thank you,
